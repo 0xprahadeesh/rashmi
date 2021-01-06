@@ -1,5 +1,5 @@
 # rashmi
-The program is all about text to speech so i made this for my entertainment maybe at future it will upgraded
+The program is all about text to speech so i made this for my entertainment maybe at future I will upgraded
 
 ENTERTAINMENT 
   *telling jokes 
