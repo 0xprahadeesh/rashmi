@@ -6,6 +6,8 @@ import webbrowser as wb
 import os
 import pyjokes 
 
+# chill tamizha creation .......
+
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -30,8 +32,7 @@ def date():
     speak(date)
     speak(month)
     speak(year)
- 
-#welcome
+ #welcome
 def welcome():
     speak("hey there welcome to my world it brings you more excited!")
 #wikipedia
@@ -87,16 +88,17 @@ def food():
     speak("i was loved all kind non-veg dishes and i loved to eat chocalate so much")
 #name
 def name():
-    speak("hello! am natasha and am here to help you ! tell me what do you want?") 
+    speak("hello! I'm rashmika and am here to help you ! tell me what do you want?") 
 #call me
 def callme():
-    speak("say hey alexa!")
+    speak("say hey rashmika!")
+
 #life
 def life():
     speak("yeah its fine i love my life")
 # WISHES (INTRO)
 def wishme():
-    speak("Welcome back sir!")
+    speak("Welcome back my dear!")
     speak("the current time is")
     time()
     speak("the current date is")
@@ -104,14 +106,14 @@ def wishme():
 
     hour = datetime.datetime.now().hour
     if hour >= 6 and hour <12:
-        speak("good morning sir!")
+        speak("good morning dear!")
     elif hour >=12 and hour <18:
-        speak("good afternoon sir!")
+        speak("good afternoon dear!")
     elif hour >=16 and hour <=18:
-        speak("good evening sir! do u had your coffee")
+        speak("good evening dear! do u had your coffee")
     else:
-        speak("good night sir")
-    speak("alexa at your service.Please tell how can i help you?")
+        speak("good night dear")
+    speak("rashmika at your service Please tell how can i help you?")
 # RECOGNIZER
 def takeCommand():
     r = sr.Recognizer()
@@ -137,6 +139,10 @@ def chrome():
     chromepath = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s'
     search = input("website:")
     wb.get(chromepath).open_new_tab(search+'.com')
+#about
+def about():
+    speak("To know more about me please scan this QR code")
+    import qrcode.py
 
 #idk
 def idk():
@@ -159,6 +165,7 @@ if __name__ == "__main__":
         elif 'songs' in query:
             speak("here the some of the songs")
             songs()
+            exit()
         elif 'song' in query:
             speak("do u want my favourite ok" )
             favouritesong()
@@ -187,7 +194,13 @@ if __name__ == "__main__":
         elif 'boring' in query:
             speak("wait, i will entertain you by telling joke ")
             jokes()
-           #still idk not imported want to 
+        elif 'search' in query:
+            chrome()
+
+        elif 'about you' in query:
+            about()
+
+        else:
+            idk()   
 
 takeCommand()
-
