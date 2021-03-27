@@ -1,3 +1,9 @@
+:::::::::::::::::::::DISCLAIMER ::::::::::::::::
+
+----- (tested only in windows) ---------
+
+------------------------------------------------
+
 # rashmi
 The program is all about text to speech so i made this for my entertainment maybe at future I will upgraded
 
